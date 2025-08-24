@@ -109,7 +109,7 @@ pipeline {
                             
                             # Update the image tag in the manifest.yaml file
                             cd Mega-Project-CD
-                            sed -i "s|adijaiswal/bankapp:.*|adijaiswal/bankapp:${IMAGE_TAG}|" Manifest/manifest.yaml
+                            sed -i "s|manish1232/bankapp:.*|manish1232/bankapp:${IMAGE_TAG}|" Manifest/manifest.yaml
                             
                             # Confirm changes
                             echo "Updated manifest file contents:"
@@ -154,9 +154,9 @@ post {
             emailext (
                 subject: "${jobName} - Build ${buildNumber} - ${pipelineStatus.toUpperCase()}",
                 body: body,
-                to: '567adddi.jais@gmail.com',
-                from: 'jenkins@devopsshack.com',
-                replyTo: 'jenkins@devopsshack.com',
+                to: 'mk634184@gmail.com',
+                from: 'mk634184@gmail.com',
+                replyTo: 'mk634184@gmail.com',
                 mimeType: 'text/html',
                
             )
